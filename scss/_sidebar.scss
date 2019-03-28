@@ -2,4 +2,30 @@
   background-color: $color-primary;
   grid-row: 1 / -1; // first to the last row
   grid-column: sidebar-start / sidebar-end; // use named columns
+  display: flex;
+  justify-content: center;
+
+  .nav_button {
+    border: none;
+    border-radius: 0;
+
+    height: 2px;
+    width: 4.5rem;
+    background-color: #fff;
+    margin-top: 4rem;
+
+
+    &::before,
+    &::after {
+      content: "";
+      height: 2px;
+      width: 4.5rem;
+      background-color: #fff;
+      display: block;
+    }
+
+    &::before { transform: translateY(-1.5rem);}
+    &::after { transform: translateY(1.3rem);}
+  }
 }
+
